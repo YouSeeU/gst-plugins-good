@@ -955,7 +955,7 @@ gst_matroska_mux_video_pad_setcaps (GstPad * pad, GstCaps * caps)
 
   mux = GST_MATROSKA_MUX (GST_PAD_PARENT (pad));
 
-  if ((old_caps = gst_pad_get_current_caps (pad))) {
+ /* if ((old_caps = gst_pad_get_current_caps (pad))) {
     if (mux->state >= GST_MATROSKA_MUX_STATE_HEADER
         && !gst_caps_is_equal (caps, old_caps)) {
       GST_ELEMENT_ERROR (mux, STREAM, MUX, (NULL),
@@ -964,7 +964,7 @@ gst_matroska_mux_video_pad_setcaps (GstPad * pad, GstCaps * caps)
       goto refuse_caps;
     }
     gst_caps_unref (old_caps);
-  }
+  }*/
 
   /* find context */
   collect_pad = (GstMatroskaPad *) gst_pad_get_element_private (pad);
@@ -1796,7 +1796,7 @@ gst_matroska_mux_audio_pad_setcaps (GstPad * pad, GstCaps * caps)
 
   mux = GST_MATROSKA_MUX (GST_PAD_PARENT (pad));
 
-  if ((old_caps = gst_pad_get_current_caps (pad))) {
+/*  if ((old_caps = gst_pad_get_current_caps (pad))) {
     if (mux->state >= GST_MATROSKA_MUX_STATE_HEADER
         && !gst_caps_is_equal (caps, old_caps)) {
       GST_ELEMENT_ERROR (mux, STREAM, MUX, (NULL),
@@ -1805,7 +1805,7 @@ gst_matroska_mux_audio_pad_setcaps (GstPad * pad, GstCaps * caps)
       goto refuse_caps;
     }
     gst_caps_unref (old_caps);
-  }
+  }*/
 
   /* find context */
   collect_pad = (GstMatroskaPad *) gst_pad_get_element_private (pad);
@@ -2232,7 +2232,7 @@ gst_matroska_mux_subtitle_pad_setcaps (GstPad * pad, GstCaps * caps)
 
   mux = GST_MATROSKA_MUX (GST_PAD_PARENT (pad));
 
-  if ((old_caps = gst_pad_get_current_caps (pad))) {
+  /*if ((old_caps = gst_pad_get_current_caps (pad))) {
     if (mux->state >= GST_MATROSKA_MUX_STATE_HEADER
         && !gst_caps_is_equal (caps, old_caps)) {
       GST_ELEMENT_ERROR (mux, STREAM, MUX, (NULL),
@@ -2241,7 +2241,7 @@ gst_matroska_mux_subtitle_pad_setcaps (GstPad * pad, GstCaps * caps)
       goto refuse_caps;
     }
     gst_caps_unref (old_caps);
-  }
+  }*/
 
   /* find context */
   collect_pad = (GstMatroskaPad *) gst_pad_get_element_private (pad);
